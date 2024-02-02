@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="helloWorld" class="spring.HelloWorld" init-method="init" destroy-method="destroy"></bean>
+    <bean id="springClass" class="spring.SpringClass" scope="prototype"></bean>
+    <bean id="springClass2" class="spring.SpringClass2" scope="singleton"></bean>
+</beans>
