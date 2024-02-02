@@ -5,6 +5,8 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="helloWorld" class="spring.HelloWorld" init-method="init" destroy-method="destroy"></bean>
+<!-- default singletoon dır -->
     <bean id="springClass" class="spring.SpringClass" scope="prototype"></bean>
-    <bean id="springClass2" class="spring.SpringClass2" scope="singleton"></bean>
+    <!-- singleton scope ta çağırmasak bile bir nesne ayağa kalkar lazy init ile engellenir -->
+    <bean id="springClass2" class="spring.SpringClass2" scope="singleton" lazy-init="true"></bean>
 </beans>
