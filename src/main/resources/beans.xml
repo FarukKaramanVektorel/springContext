@@ -24,8 +24,9 @@
 	<!-- <bean id="muzisyen" class="spring.Muzisyen"> <constructor-arg ref="davul"></constructor-arg> 
 		<property name="darbuka" ref="darbuka"></property> </bean> -->
 
-	<bean id="muzisyen" class="spring.Muzisyen" autowire="constructor">
-	</bean>
+	 <!--<bean id="muzisyen" class="spring.Muzisyen" autowire="constructor"></bean>-->
+	<!--<bean id="muzisyen" class="spring.Muzisyen" autowire="byName"></bean>-->
+	<bean id="muzisyen" class="spring.Muzisyen" autowire="byType"></bean>
 
 	<bean id="davul" class="spring.Davul"></bean>
 	<bean id="darbuka" class="spring.Darbuka"></bean>
