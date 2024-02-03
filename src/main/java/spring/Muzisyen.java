@@ -1,10 +1,13 @@
 package spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Muzisyen {
+	@Autowired
 	private Davul davul;
 	private Darbuka darbuka;
 	private Baglama baglama;
-	
+
 	public Muzisyen() {
 		// TODO Auto-generated constructor stub
 	}
@@ -19,6 +22,7 @@ public class Muzisyen {
 		this.davul.playInstrument();
 	}
 
+	@Autowired
 	public void setDarbuka(Darbuka darbuka) {
 		System.out.println("Setter works");
 		this.darbuka = darbuka;
