@@ -3,7 +3,7 @@ package spring;
 public class HelloWorld {
 	
 	public HelloWorld() {
-		System.out.println("HelloWorld Constructer");
+		System.out.println("HolleoWorld Constructer");
 	}
 	
 	public void sayHello() {

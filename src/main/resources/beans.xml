@@ -9,4 +9,15 @@
     <bean id="springClass" class="spring.SpringClass" scope="prototype"></bean>
     <!-- singleton scope ta çağırmasak bile bir nesne ayağa kalkar lazy init ile engellenir -->
     <bean id="springClass2" class="spring.SpringClass2" scope="singleton" lazy-init="true"></bean>
+    <!-- Constructor Args - Dependency Injection -->
+    <bean id="springConstructorArgs" class="spring.ConstructorArgs" scope="prototype">
+    <constructor-arg index="0" value="Vektörel"></constructor-arg>
+    <constructor-arg index="1" value="Bilişim"></constructor-arg>
+    <property name="adress" value="Ankara"></property>
+    </bean>
+    
+    <bean id="muzisyen" class="spring.Muzisyen">
+    <constructor-arg ref="davul"></constructor-arg>
+    </bean>
+    <bean id="davul" class="spring.Davul"></bean>
 </beans>
